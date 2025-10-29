@@ -3,21 +3,27 @@
    margin: 0; 
    padding: 0;
     box-sizing: border-box;
+    font-size: 23px;
+   
  }
+
 body { 
   font-family: Arial, sans-serif;
  background: #f9fff9; 
  color: #1a1a1a; 
  line-height: 1.6;
+ 
 
 }
 .container {
  width: 90%; 
- max-width: 1100px; 
+ max-width: 75.75rem; 
  margin: auto; 
- padding: 0 15px;
+ padding: 0 1.5rem;
  }
 
+ 
+ 
 /* Header */
 .top-header { 
   background: #1a8a4d;
@@ -58,7 +64,7 @@ body {
    border-radius: 8px;
  }
 .menu-list a:hover { 
-  background: rgba(255,255,255,0.2); 
+  background: #ffffff33; 
 }
 .menu-btn, .dark-btn {
  background: none; 
@@ -107,10 +113,14 @@ body {
 
 /* Snapshot */
 .snapshot-box {
- background: white;
+ background: #d2882d16;
   padding: 1.5rem;
    border-radius: 12px;
     box-shadow: 0 4px 12px #0000001a;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin: 1rem auto;
+
  }
 .snapshot-box h2 {
    margin-bottom: 1rem;
@@ -151,7 +161,7 @@ h2 { font-size: 1.8rem;
  }
 
 .tool, .stat, .work {
-   background: white; 
+   background: #d2882d16; 
    padding: 1.5rem;
     border-radius: 12px;
      text-align: center;
@@ -166,9 +176,9 @@ h2 { font-size: 1.8rem;
 
 /* Form */
 .form {
- max-width: 600px; 
+ max-width: 900px; 
  margin: 2rem auto; 
- background: white; 
+ background: #d2882d16; 
  padding: 2rem; 
  border-radius: 12px; 
  box-shadow: 0 4px 12px #0000001a;
@@ -206,9 +216,12 @@ h2 { font-size: 1.8rem;
 /* Dark Mode */
 body.dark {
    background: #121212;
-    color: #e0e0e0; }
+    color: #dd9393; }
+
 body.dark .top-header {
-   background: #0d3d1f; }
+   background: #0d3d1f;
+ }
+
 body.dark .snapshot-box,
 body.dark .tool,
 body.dark .stat,
@@ -252,4 +265,33 @@ body.dark .bar.good {
   .tool-grid, .stat-grid, .work-grid {
      grid-template-columns: 1fr; 
     }
+}
+
+/*Addition of little animations*/
+
+/* 1. Page fade in */
+body {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* 2. Menu slide down */
+.menu-list {
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+.menu-list.active {
+  max-height: 300px;
+}
+
+/* 3. Button hover lift */
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 20px rgba(14, 10, 10, 0.2);
 }

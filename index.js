@@ -59,13 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    msg.textContent = 'Sending...';
-    msg.style.color = '#666';
-
+   
     setTimeout(() => {
       form.reset();
       msg.textContent = 'Thanks! I’ll reply soon.';
-      msg.style.color = 'green';
+      msg.style.color = 'peach';
       setTimeout(() => msg.textContent = '', 3000);
     }, 800);
   });
