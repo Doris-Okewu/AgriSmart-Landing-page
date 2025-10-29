@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriSmart - Tools for Farmers</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Menu -->
+  <header class="top-header">
+    <nav class="nav" aria-label="Main menu">
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true">Leaf</span>
+        <span class="logo-text">AgriSmart</span>
+      </div>
+
+      <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="main-menu">
+        Menu
+      </button>
+
+      <ul id="main-menu" class="menu-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#my-work">My Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button id="dark-btn" class="dark-btn" aria-label="Toggle dark mode">
+        Dark Mode
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-text">
+          <h1>Grow Smarter with AgriSmart</h1>
+          <p class="lead">Simple tools for small farmers. Built by Doris.</p>
+          <div class="buttons">
+            <a href="#tools" class="btn">See Tools</a>
+            <a href="#contact" class="btn outline">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Field Snapshot -->
+        <div class="snapshot-box">
+          <h2>Maize Field Today</h2>
+          <div class="data">
+            <p><strong>Soil:</strong> 18% <span class="bar low"></span> <span class="status">Low - Water it!</span></p>
+            <p><strong>Temp:</strong> 28°C <span class="bar good"></span> <span class="status">Good</span></p>
+            <p><strong>Pests:</strong> None <span class="bar good"></span> <span class="status">Safe</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>Hi, I'm Doris. I studied farming and now learning code to help farmers like my family.</p>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="section">
+      <div class="container">
+        <h2>Tools for Farms</h2>
+        <div class="tool-grid">
+          <div class="tool">Soil Check</div>
+          <div class="tool">Weather Alert</div>
+          <div class="tool">Pest Finder</div>
+          <div class="tool">Water Save</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section id="impact" class="section">
+      <div class="container">
+        <h2>Why It Helps</h2>
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="number">+25%</div>
+            <p>More Crops</p>
+          </div>
+          <div class="stat">
+            <div class="number">-30%</div>
+            <p>Less Water</p>
+          </div>
+          <div class="stat">
+            <div class="number">1000+</div>
+            <p>Farmers Helped</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Work -->
+    <section id="my-work" class="section">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="work-grid">
+          <div class="work">
+            <h3>Weather App</h3>
+            <p>90% accurate. 1K users.</p>
+          </div>
+          <div class="work">
+            <h3>Farm Plan</h3>
+            <p>Saves 35% time. 800+ downloads.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form" class="form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="msg">Message (optional)</label>
+            <textarea id="msg" rows="3" placeholder="Your farm or idea..."></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+          <p id="form-msg" class="form-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> AgriSmart - Made by Doris</p>
+    </div>
+  </footer>
+
+</body>
+</html>

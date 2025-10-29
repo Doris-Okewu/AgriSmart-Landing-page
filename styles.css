@@ -1,0 +1,255 @@
+
+* {
+   margin: 0; 
+   padding: 0;
+    box-sizing: border-box;
+ }
+body { 
+  font-family: Arial, sans-serif;
+ background: #f9fff9; 
+ color: #1a1a1a; 
+ line-height: 1.6;
+
+}
+.container {
+ width: 90%; 
+ max-width: 1100px; 
+ margin: auto; 
+ padding: 0 15px;
+ }
+
+/* Header */
+.top-header { 
+  background: #1a8a4d;
+ color: white; 
+ position: sticky;
+ top: 0;
+ z-index: 100; 
+
+}
+.nav {
+   display: flex; 
+   justify-content: space-between;
+    align-items: center;
+     padding: 1rem 0;
+ }
+.logo {
+   display: flex; 
+   align-items: center;
+    gap: 8px; 
+  font-weight: bold; 
+  font-size: 1.2rem;
+
+}
+
+
+.logo-icon {
+   font-size: 1.5rem;
+ }
+.menu-list {
+   display: flex; 
+   gap: 1rem; 
+   list-style: none; 
+  }
+.menu-list a { 
+  color: white; 
+  text-decoration: none;
+   padding: 0.5rem 1rem; 
+   border-radius: 8px;
+ }
+.menu-list a:hover { 
+  background: rgba(255,255,255,0.2); 
+}
+.menu-btn, .dark-btn {
+ background: none; 
+ border: none; 
+ color: white; 
+ font-size: 1.1rem;
+  cursor: pointer;
+   padding: 0.5rem;
+ }
+
+/* Hero */
+.hero {
+   padding: 4rem 0;
+   background: #e8f5e9;
+   }
+.hero-text h1 { 
+  font-size: 2rem;
+   margin-bottom: 1rem; 
+}
+
+.lead {
+ font-size: 1.1rem;
+ margin-bottom: 1.5rem;
+ color: #555;
+ }
+.buttons {
+ display: flex;
+  gap: 1rem;
+   flex-wrap: wrap;
+ }
+.btn {
+ padding: 0.8rem 1.5rem;
+ border-radius: 8px;
+ text-decoration: none;
+ font-weight: bold; 
+}
+.btn {
+   background: #1a8a4d;
+    color: white; 
+}
+.outline {
+   background: transparent;
+   border: 2px solid #1a8a4d;
+   color: #1a8a4d; 
+}
+
+/* Snapshot */
+.snapshot-box {
+ background: white;
+  padding: 1.5rem;
+   border-radius: 12px;
+    box-shadow: 0 4px 12px #0000001a;
+ }
+.snapshot-box h2 {
+   margin-bottom: 1rem;
+    font-size: 1.3rem; 
+}
+.data p {
+   margin: 0.8rem 0;
+    font-size: 1rem; 
+  }
+.bar { 
+  display: inline-block;
+   width: 100px;
+    height: 8px;
+     background: #ddd; 
+     border-radius: 4px; 
+     margin: 0 8px;
+      vertical-align: middle;
+}
+.low {
+   background: orange;
+   width: 18% !important; 
+}
+.good { 
+background: #4caf50; 
+}
+
+/* Sections */
+.section { padding: 3rem 0; }
+h2 { font-size: 1.8rem; 
+  margin-bottom: 1rem;
+   text-align: center; 
+}
+
+.tool-grid, .stat-grid, .work-grid { 
+  display: grid; 
+  gap: 1.5rem; 
+  margin-top: 1.5rem;
+ }
+
+.tool, .stat, .work {
+   background: white; 
+   padding: 1.5rem;
+    border-radius: 12px;
+     text-align: center;
+   box-shadow: 0 4px 12px #0000001a; 
+}
+
+.number {
+ font-size: 2rem; 
+ font-weight: bold;
+  color: #1a8a4d;
+ }
+
+/* Form */
+.form {
+ max-width: 600px; 
+ margin: 2rem auto; 
+ background: white; 
+ padding: 2rem; 
+ border-radius: 12px; 
+ box-shadow: 0 4px 12px #0000001a;
+ }
+
+.field {
+   margin-bottom: 1rem;
+ }
+.field label {
+ display: block; 
+ margin-bottom: 0.5rem;
+  font-weight: bold;
+ }
+.field input, .field textarea {
+   width: 100%;
+    padding: 0.8rem;
+     border: 1px solid #ccc; 
+     border-radius: 8px; 
+     font-size: 1rem; 
+  }
+
+.form-msg {
+   margin-top: 1rem;
+    font-weight: bold;
+ }
+
+/* Footer */
+.footer {
+   background: #1a8a4d;
+    color: white; 
+    text-align: center; padding: 1.5rem 0; }
+
+
+
+/* Dark Mode */
+body.dark {
+   background: #121212;
+    color: #e0e0e0; }
+body.dark .top-header {
+   background: #0d3d1f; }
+body.dark .snapshot-box,
+body.dark .tool,
+body.dark .stat,
+body.dark .work, 
+body.dark .form {
+   background: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+  }
+
+body.dark .number { 
+  color: #81c784;
+
+ }
+
+body.dark .bar.good { 
+  background: #4caf50; 
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-list {
+     display: none; 
+     flex-direction: column;
+     position: absolute; 
+     top: 100%; 
+     left: 0; 
+     right: 0;
+      background: #1a8a4d;
+       padding: 1rem;
+ }
+
+  .menu-list.active {
+    display: flex;
+   }
+  .hero {
+     text-align: center; 
+    }
+  .hero-text h1 { 
+    font-size: 1.8rem;
+   }
+  .tool-grid, .stat-grid, .work-grid {
+     grid-template-columns: 1fr; 
+    }
+}
