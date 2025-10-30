@@ -1,6 +1,6 @@
 // Wait for page to load
 document.addEventListener('DOMContentLoaded', function() {
-
+console.log(validator.isEmail('test@example.com'));
   // I want to make the year to always update
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -53,17 +53,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
 
-    if (!name || !email.includes('@')) {
-      msg.textContent = 'Please fill name and email!';
-      msg.style.color = 'red';
-      return;
-    }
+    if (!validator.isAlpha(name.replace(/\s/g, '')) || !validator.isEmail(email)) {
+  msg.textContent = 'Please enter a valid full name and email!';
+  msg.style.color = 'red';
+  return;
+}
 
    
     setTimeout(() => {
       form.reset();
       msg.textContent = 'Thanks! I’ll reply soon.';
-      msg.style.color = 'peach';
+      msg.style.color = 'green';
       setTimeout(() => msg.textContent = '', 3000);
     }, 800);
   });
